@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .cvbtn {
+            color: white;
+            background: black;
+        }
+
+        .cvbtn:hover {
+            color: black;
+            background: white;
+        }
+
+        .navbar {
+            font-size: 19px;
+            line-height: 40px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 3%;
+        }
+
+        .navsec {
+            display: flex;
+            width: 261px;
+        }
+
+        .navbtn {
+            justify-content: space-evenly;
+            gap: 25px;
+        }
+
+        .firstpg span {
+            font-size: 85px;
+        }
+
+        .firstpg .name {
+            font-size: 28px;
+        }
+
+        .firstpg {
+            margin: 15vh 5vh
+        }
+
+        .fpcontact {
+            line-height: 45px;
+            font-size: 19px;
+            margin: 60px 0px;
+        }
+
+        #about,
+        #resume,
+        #contact,
+        #skill {
+            margin: 300px 5vh;
+            padding-top: 75px;
+        }
+
+        #about p,
+        #resume p,
+        #contact p,
+        #skill p {
+            font-size: 19px;
+            width: 500px;
+            font-family: sans-serif;
+            line-height: 35px;
+            letter-spacing: 5px;
+            margin: 50px 0px;
+        }
+    </style>
+</head>
+
+<body
+    style="display: grid; grid-template-columns: 1fr 1fr; width: 100vw; margin: 0px; padding: 0px; scroll-behavior: smooth; overflow-x: hidden;">
+
+    <div style="position: fixed; right: 0px; width: 50%; background: rgb(142, 166, 155); height: 100vh;">
+        <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+            <img src="photo.jpg" style="height: 420px;">
+            <a class="cvbtn"
+                style="font-size: 16px; font-family: sans-serif; position: absolute; top: 3%; right: 7%; padding: 10px 35px; transition: 0.5s ;"
+                onclick="downloadResume()">Download
+                CV</a>
+        </div>
+    </div>
+    <div style="position: absolute; padding: 3vh 7vh; width: 50%; box-sizing: border-box; overflow: hidden;">
+        <div class="navbar">
+            <div class="navsec logo"> Curriculum Vitae </div>
+            <div class="navsec navbtn">
+                <div class="navitems">
+                    <a href="#about">about</a>
+                </div>
+                <div class="navitems">
+                    <a href="#resume">resume</a>
+                </div>
+                <div class="navitems">
+                    <a href="#skill">skill</a>
+                </div>
+                <div class="navitems">
+                    <a href="#contact">contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="firstpg">
+            <p class="name"><span>Sayandita Rao</span> <br>UG Computer Engineer</p>
+            <p class="fpcontact"><b>Phone</b> 9339203727<br><b>Email</b> raosayandita3@gmail.com <br><b>Address</b> Kolkata,
+                India<br> <u><a
+                        href="https://www.linkedin.com/in/sayandita-rao-b607b327b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></u>
+                • <u><a
+                        href="https://www.instagram.com/sayandita_rao/profilecard/?igsh=aHE0M2RzcmR4amZs">Instagram</a></u>
+                • <u><a href="https://github.com/Sayandita">Github</a></u></p>
+            <div> <a href="#resume">See full CV ↓</a></div>
+        </div>
+        <div id="about">
+
+            <h1>About _______________________</h1>
+            <p> Skilled Full Stack Web Developer with extensive experience in HTML, CSS, JavaScript, MySQL, and
+                PHP. Proficient in backend and frontend development, adept at creating responsive and user-friendly web
+                applications. Possesses a strong foundation in programming language Java
+                enabling versatile problem-solving abilities. Proven track record of delivering high-quality projects
+                within deadlines while adhering to best practices and Industry standards. Committed to continuous
+                learning and staying updated with the latest technologies to enhance project efficiency and innovation.
+                Seeking opportunities to leverage expertise in full stack development to contribute to dynamic and
+                Innovative projects.</p>
+        </div>
+        <div id="resume">
+            <h1>Resume_______________________</h1>
+            <p>EDUCATION </br></br>
+
+                University</br>
+
+                2022-2026</br>
+
+                Btech-Computer science engineering</br>
+
+                Current gpa-8.81</br>
+
+                Last sgpa 8.81</br></br>
+
+                School</br>
+
+                12th (CBSE) - 81%</br>
+
+                10th(ICSE)-83%</p>
+        </div>
+        <div id="skill">
+            <h1>Skill and Projects_______________________</h1>
+            <p>SKILLS</br></br>
+
+                Frontend: Html, Css & Javascript</br>
+
+                Backend: MySQL, PHP</br>
+
+                languages:Java</p>
+        </div>
+        <div id="contact">
+            <h1>Contact_______________________</h1>
+            <p>CONTACT</br></br>
+
+                9339203727</br>
+
+                raosayandita3@gmail.com</br>
+
+                36/2 Belghoria, kolkata</p>
+        </div>
+    </div>
+
+    <script>
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = 'assests/resume.pdf'; // Replace with the actual path to your resume
+            link.download = 'resume.pdf';
+            link.click();
+        }
+    </script>
+
+
+
+</body>
+
+</html>
